@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+:root{
+    --cor-branca: #FFFFFF;
+    --cor-azul: #167BF7;
+    --cor-cinza: #C0C0C0;
+    --cor-vermelha: #EC2F46;
+    --cor-fundo: #00030C;
+    --fonte-principal: 'Inter', sans-serif;
+    --azul-efeito: #88beff;
+}
+
+body{
+    background-color: var(--cor-fundo);
+    color: var(--cor-branca);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+.container{
+    height:100vh;
+    display:grid; /*Separa a página em colunas e cada item do elemento pai fica "espalhado" conforme o tamanho estabelecido */
+    grid-template-columns: 50% 50%; /*Define o tamanho de cada coluna da pagina */
+
+}
+
+.principal{
+    background-image: url("/img/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center; /*Quando está no grid, alinha ao centro da coluna */
+    text-align: center;  /*Alinha tudo que está dentro de um elemento de bloco (no caso é a section)- Por padrão vem em display: block;*/
+}
+
+.container__caixa{
+    margin: 0 6em;
+}
+
+.container__titulo{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem{
+    margin: 1em 0 2em 0;
+}
+
+.container__botao{
+    background-color: var(--cor-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--cor-branca);
+    display: block; /*Com essa propriedade, pega o bloco inteiro que ocupa*/
+    text-decoration: none;
+    margin: 1em;
+}
+
+.container__botao:hover{
+    background-color: var(--azul-efeito);
+    color: var(--cor-fundo);
+    padding:1.8em;
+}
+
+.container__botao:active{
+    background-color: aquamarine;
+}
+
+.container__aviso{
+    color:var(--cor-cinza);
+    font-size: 12px;
+}
+
+.secundario{
+    align-items: center; /*Centralizando os itens na coluna (grid)*/
+    margin: 0 10em;
+}
+
+.botao__secundario{
+    background-color: transparent;
+    border: 2px solid var(--cor-branca)
+}
+
+.secundario__imagem{
+    width:80%;
+}
+
+.descricao__titulo{
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--cor-branca);
+    margin-bottom: 0.2em;
+}
+
+.descricao__texto{
+    color:var(--cor-cinza)
+}
+
+.container__descricao{
+    padding:2em;
+}
+
+.secundario__botao{
+    display: inline-block; /*Tenta pegar "as melhores partes" do inline do block;inline: transformou o elementro em linha - block: pegou a quebra de linha do texto de cima e permite utilizar o width e height */
+    margin-top: 1em;
+}
+
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivos__titulo{
+    font-size: 3em;
+    color: var(--cor-branca)
+}
+
+.dispositivos__lista{
+    display: flex; /*display: flex = transformou em um flex container e os item em flex itens; junto do display flex, vem o flex-direction e por padrão é row(em linha) */
+    justify-content: center;
+    list-style-type: none; /*estilo da lista; uns pontinhos para indicar os itens da lista */ 
+    margin: 5em 0;
+    gap:6em;
+}
+
+.lista_item{
+    font-size: 2em;
+    color:var(--cor-branca)
+}
+
+.rodape{
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.rodape__lista{
+    display:flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.rodape__lista__link a{
+    text-decoration: none;
+    color:var(--cor-branca);
+    margin: 1em 0 1em 1em;
+}
+
+.rodape__lista__link a:hover{
+    color:var(--cor-azul);
+    text-decoration: underline;
+}
+
+.rodape__lista__link a:active{
+    color:pink;
+}
+
+.rodape__texto{
+    margin:2.5em 0;
+    font-family: var(--fonte-principal);
+    color:var(--cor-cinza);
+    font-size: 14px;
+}
